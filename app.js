@@ -6,6 +6,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+// Route handler for health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
